@@ -11,7 +11,7 @@
     <name>zttx-platform</name>
     <description>服务平台主项目</description>
     <modules>
-        <module>zttx-web</module>
+        <module>zttx-gen</module>
     </modules>
 
     <properties>
