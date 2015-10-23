@@ -17,6 +17,6 @@ public class GeneratorFileTest extends TestCase
     
     public void testGenerateCRUDByTables() throws Exception
     {
-        generatorFile.generateCRUDByTables(new String[]{"DealerShopEnvTemp"});
+        generatorFile.generateCRUDByTables(new String[]{"DealerShopEnvTemp","UserInfo"});
     }
 }
