@@ -12,6 +12,7 @@
     <description>服务平台主项目</description>
     <modules>
         <module>zttx-gen</module>
+        <module>zttx-web</module>
     </modules>
 
     <properties>
