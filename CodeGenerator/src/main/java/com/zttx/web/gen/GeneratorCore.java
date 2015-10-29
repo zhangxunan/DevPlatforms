@@ -117,7 +117,7 @@ public class GeneratorCore
         }
         else
         {
-            System.out.println("[生成]\t 模型:" + templateRelativePath + " 到 " + targetFilename + "[" + absoluteOutputFilePath.getAbsolutePath() + "]");
+            System.out.println("[生成]\t 模型:" + templateRelativePath + " 到 " + absoluteOutputFilePath.getAbsolutePath());
             saveNewOutputFileContent(template, templateDataModel, absoluteOutputFilePath);
         }
     }
@@ -232,8 +232,7 @@ public class GeneratorCore
      */
     private String getJavaOutRootDir()
     {
-        System.out.println("getJavaOutRootDir:" + FileUtils.getUserDirectoryPath());
-        return PropertiesProvider.getProperties().getProperty("java_file_output_directory");
+        return System.getProperty("user.dir") + PropertiesProvider.getProperties().getProperty("java_file_output_directory");
     }
     
     /**
@@ -243,6 +242,6 @@ public class GeneratorCore
      */
     private String getPageOutRootDir()
     {
-        return PropertiesProvider.getProperties().getProperty("page_file_output_directory");
+        return System.getProperty("user.dir") + PropertiesProvider.getProperties().getProperty("page_file_output_directory");
     }
 }

@@ -16,9 +16,16 @@ public class GeneratorFileTest extends TestCase
 {
     protected GeneratorFile generatorFile = new GeneratorFile();
     
-    public void testClean() throws Exception
+    public void testGeneratorCode() throws Exception
     {
         generatorFile.clean();
+        generatorFile.generateCRUDByTables("dealer", new String[]{"DealerInfo"});
+        generatorFile.generateCRUDByTables("brand", new String[]{"BrandInfo"});
+    }
+
+    public void testClean() throws Exception
+    {
+        // generatorFile.clean();
     }
     
     public void testGenerateCRUDByTable() throws Exception
@@ -28,8 +35,7 @@ public class GeneratorFileTest extends TestCase
     
     public void testGenerateCRUDByTables() throws Exception
     {
-        generatorFile.generateCRUDByTables("dealer", new String[]{"DealerShopEnvTemp"});
-        generatorFile.generateCRUDByTables("brand", new String[]{"DealerShopEnvTemp"});
+        // generatorFile.generateCRUDByTables("dealer", new String[]{"DealerShopEnvTemp"});
     }
     
     public void testGenerateCRUDByAllTable() throws Exception
