@@ -30,9 +30,6 @@ public class PropertiesProvider
         try
         {
             props = loadAllProperties("generator.properties");
-            String basepackage = props.getProperty("basepackage");
-            String basepackage_dir = basepackage.replace('.', '/');
-            props.put("basepackage_dir", basepackage_dir);
         }
         catch (IOException e)
         {

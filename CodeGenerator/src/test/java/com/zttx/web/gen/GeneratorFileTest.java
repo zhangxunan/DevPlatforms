@@ -19,8 +19,8 @@ public class GeneratorFileTest extends TestCase
     public void testGeneratorCode() throws Exception
     {
         generatorFile.clean();
-        generatorFile.generateCRUDByTables("dealer", new String[]{"DealerInfo"});
-        generatorFile.generateCRUDByTables("brand", new String[]{"BrandInfo"});
+        generatorFile.generateCRUDByTables("dealer", "DealerInfo,DealerMessage".split(","));
+        generatorFile.generateCRUDByTables("brand", "BrandInfo".split(","));
     }
 
     public void testClean() throws Exception
